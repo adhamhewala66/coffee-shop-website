@@ -47,6 +47,7 @@
                 </a>
                 <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'accounts:signin' %}">Sign in</a>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'accounts:signup' %}">Sign up</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="accounts:profile">Profile</a>
@@ -93,8 +94,8 @@
               </li>
 
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2 remove-outline" type="search" placeholder="Search" aria-label="Search">
+            <form action="{% url 'products:filter' %}" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 remove-outline" name="sname" type="search" placeholder="Search" aria-label="Search">
             <div class="btn-group" role="group">
               <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
               <a title="Advanced Search" data-toggle="tooltip" href="{% url 'products:search' %}" class="btn btn-warning my-2 my-sm-0" type="submit">

@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block body %}
@@ -70,7 +69,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{product}}</h5>
                   <p class="card-text">{{product.desc}}</p>
-                  <a href="#" class="btn btn-warning">Show Details</a>
+                  <a href="{% url 'products:product-detail' product.id %}" class="btn btn-warning">Show Details</a>
                 </div>
               </div>
             </div>
